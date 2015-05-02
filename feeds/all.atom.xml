@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+ <title type="text">chmanchester's blog: chmanchester's blog</title>
+ <link rel="self" href="http://www.example.com/feeds/all.atom.xml" />
+ <link href="http://www.example.com/index.html" />
+ <id>urn:http-www-example-com:-index-html</id>
+ <updated>2015-05-02T18:28:53Z</updated>
+ <entry>
+  <title type="text">Content to begin after this post</title>
+  <link rel="alternate" href="http://www.example.com/blog/2015/05/02/content-to-begin-after-this-post/?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:http-www-example-com:-blog-2015-05-02-content-to-begin-after-this-post</id>
+  <published>2015-05-02T18:28:53Z</published>
+  <updated>2015-05-02T18:28:53Z</updated>
+  <author>
+   <name>Chris</name></author>
+  <content type="html">&lt;html&gt;
+&lt;p&gt;This is a short post to get things up and running and understand markdown.&lt;/p&gt;
+&lt;!-- more--&gt;
+
+&lt;p&gt;I&amp;rsquo;ve been an employee at the &lt;a href="http://mozilla.com"&gt;Mozilla Corporation&lt;/a&gt; working on test infrastructure and tools for about a year. In summer of 2013 I was an intern at the same, and before that a contributor for a short time.&lt;/p&gt;
+
+&lt;p&gt;In the intervening months I attended the University of Pennsylvania, where I was assigned texts reading such as &lt;a href="http://www.cse.chalmers.se/~rjmh/Papers/whyfp.html"&gt;Why Functional Programming Matters&lt;/a&gt;, and formed some vocal opinions on the subject. In retrospect I think my primary attraction to languages like Haskell was that I found it easy to correct and powerful programs, and this was a lot of fun. More recently I&amp;rsquo;ve come to believe I was not measuring my experience by the most important criteria, although just the other day I was suffering from a lack of concatMap in python. (Due to duck typing, this &lt;a href="https://docs.python.org/2/library/functions.html#sum"&gt;works&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div class="brush: python"&gt;
+ &lt;table class="sourcetable"&gt;
+  &lt;tbody&gt;
+   &lt;tr&gt;
+    &lt;td class="linenos"&gt;
+     &lt;div class="linenodiv"&gt;
+      &lt;pre&gt;1
+2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
+    &lt;td class="code"&gt;
+     &lt;div class="source"&gt;
+      &lt;pre&gt;&lt;span class="n"&gt;lst&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+&lt;span class="nb"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lst&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[])&lt;/span&gt; &lt;span class="c"&gt;# is [1, 2, 3]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;p&gt;)&lt;/p&gt;
+
+&lt;p&gt;These days, my favorite functional programming language is JavaScript&lt;sup&gt;&lt;a href="#2015-05-02-content-to-begin-after-this-post-footnote-1-definition" name="2015-05-02-content-to-begin-after-this-post-footnote-1-return"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;div class="footnotes"&gt;
+ &lt;ol&gt;
+  &lt;li id="2015-05-02-content-to-begin-after-this-post-footnote-1-definition" class="footnote-definition"&gt;
+   &lt;p&gt;I tend to agree &lt;a href="http://cs.brown.edu/~sk/Publications/Papers/Published/sk-teach-pl-post-linnaean/paper.pdf"&gt;programming paradigms are on the way out&lt;/a&gt;&amp;nbsp;&lt;a href="#2015-05-02-content-to-begin-after-this-post-footnote-1-return"&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;&lt;/html&gt;</content></entry></feed>
