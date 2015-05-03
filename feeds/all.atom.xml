@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+ <title type="text">chmanchester's blog: chmanchester's blog</title>
+ <link rel="self" href="http://chmanchester.github.io/feeds/all.atom.xml" />
+ <link href="http://chmanchester.github.io/index.html" />
+ <id>urn:http-chmanchester-github-io:-index-html</id>
+ <updated>2015-05-03T02:21:15Z</updated>
+ <entry>
+  <title type="text">Content to begin after this post</title>
+  <link rel="alternate" href="http://chmanchester.github.io/blog/2015/05/02/content-to-begin-after-this-post/?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:http-chmanchester-github-io:-blog-2015-05-02-content-to-begin-after-this-post</id>
+  <published>2015-05-03T02:21:15Z</published>
+  <updated>2015-05-03T02:21:15Z</updated>
+  <author>
+   <name>Chris</name></author>
+  <content type="html">&lt;html&gt;
+&lt;p&gt;This is a short post to get things up and running and understand markdown.&lt;/p&gt;
+&lt;!-- more--&gt;
+
+&lt;p&gt;I’ve been an employee at the Mozilla Corporation working on test infrastructure and tools for about a year. In summer of 2013 I was an intern at the same, and before that a contributor.&lt;/p&gt;
+
+&lt;p&gt;In the intervening months I attended the University of Pennsylvania, where I was assigned reading such as &lt;a href="http://www.cse.chalmers.se/~rjmh/Papers/whyfp.html"&gt;Why Functional Programming Matters&lt;/a&gt;, and formed some opinions on the subject. In retrospect I think my primary attraction to languages like Haskell was that I found it easy to write correct and powerful programs in them, and this was a lot of fun. More recently I’ve come to believe I was not measuring my experience by the most important criteria, although just the other day I was suffering from a lack of concatMap in python. (Due to duck typing, &lt;code&gt;sum([[1], [2, 3]], [])&lt;/code&gt; is &lt;code&gt;[1, 2, 3]&lt;/code&gt;, conveniently).&lt;/p&gt;
+
+&lt;p&gt;These days my favorite functional programming language is JavaScript&lt;sup&gt;&lt;a href="#2015-05-02-content-to-begin-after-this-post-footnote-1-definition" name="2015-05-02-content-to-begin-after-this-post-footnote-1-return"&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;div class="footnotes"&gt;
+ &lt;ol&gt;
+  &lt;li id="2015-05-02-content-to-begin-after-this-post-footnote-1-definition" class="footnote-definition"&gt;
+   &lt;p&gt;I tend to agree &lt;a href="http://cs.brown.edu/~sk/Publications/Papers/Published/sk-teach-pl-post-linnaean/paper.pdf"&gt;programming paradigms are on their way out&lt;/a&gt;.&amp;nbsp;&lt;a href="#2015-05-02-content-to-begin-after-this-post-footnote-1-return"&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;&lt;/html&gt;</content></entry></feed>

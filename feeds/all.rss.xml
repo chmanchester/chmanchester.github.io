@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<rss version="2.0">
+ <channel>
+  <title>chmanchester's blog: chmanchester's blog</title>
+  <description>chmanchester's blog: chmanchester's blog</description>
+  <link>http://chmanchester.github.io/index.html</link>
+  <lastBuildDate>Sun, 03 May 2015 02:21:15 UT</lastBuildDate>
+  <pubDate>Sun, 03 May 2015 02:21:15 UT</pubDate>
+  <ttl>1800</ttl>
+  <item>
+   <title>Content to begin after this post</title>
+   <link>http://chmanchester.github.io/blog/2015/05/02/content-to-begin-after-this-post/?utm_source=all&amp;utm_medium=RSS</link>
+   <guid>urn:http-chmanchester-github-io:-blog-2015-05-02-content-to-begin-after-this-post</guid>
+   <pubDate>Sun, 03 May 2015 02:21:15 UT</pubDate>
+   <description>&lt;html&gt;
+&lt;p&gt;This is a short post to get things up and running and understand markdown.&lt;/p&gt;
+&lt;!-- more--&gt;
+
+&lt;p&gt;I’ve been an employee at the Mozilla Corporation working on test infrastructure and tools for about a year. In summer of 2013 I was an intern at the same, and before that a contributor.&lt;/p&gt;
+
+&lt;p&gt;In the intervening months I attended the University of Pennsylvania, where I was assigned reading such as &lt;a href="http://www.cse.chalmers.se/~rjmh/Papers/whyfp.html"&gt;Why Functional Programming Matters&lt;/a&gt;, and formed some opinions on the subject. In retrospect I think my primary attraction to languages like Haskell was that I found it easy to write correct and powerful programs in them, and this was a lot of fun. More recently I’ve come to believe I was not measuring my experience by the most important criteria, although just the other day I was suffering from a lack of concatMap in python. (Due to duck typing, &lt;code&gt;sum([[1], [2, 3]], [])&lt;/code&gt; is &lt;code&gt;[1, 2, 3]&lt;/code&gt;, conveniently).&lt;/p&gt;
+
+&lt;p&gt;These days my favorite functional programming language is JavaScript&lt;sup&gt;&lt;a href="#2015-05-02-content-to-begin-after-this-post-footnote-1-definition" name="2015-05-02-content-to-begin-after-this-post-footnote-1-return"&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;div class="footnotes"&gt;
+ &lt;ol&gt;
+  &lt;li id="2015-05-02-content-to-begin-after-this-post-footnote-1-definition" class="footnote-definition"&gt;
+   &lt;p&gt;I tend to agree &lt;a href="http://cs.brown.edu/~sk/Publications/Papers/Published/sk-teach-pl-post-linnaean/paper.pdf"&gt;programming paradigms are on their way out&lt;/a&gt;.&amp;nbsp;&lt;a href="#2015-05-02-content-to-begin-after-this-post-footnote-1-return"&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;&lt;/html&gt;</description></item></channel></rss>
