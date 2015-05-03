@@ -5,4 +5,4 @@ about ongoing work.
 
 I work on software tools at the Mozilla Corporation.
 
-I can be found as chmanchester on github, mozilla, and irc.mozilla.org.
+I can be found as chmanchester on gmail, github, bugzilla, and irc.mozilla.org.
