@@ -1,2 +1,3 @@
+http://chmanchester.github.io/blog/2015/07/15/automatic-triggering-on-try-server/
 http://chmanchester.github.io/blog/2015/05/02/content-to-begin-after-this-post/
 http://chmanchester.github.io/About.html

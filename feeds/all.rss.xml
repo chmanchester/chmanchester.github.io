@@ -4,9 +4,31 @@
   <title>chmanchester's blog: chmanchester's blog</title>
   <description>chmanchester's blog: chmanchester's blog</description>
   <link>http://chmanchester.github.io/index.html</link>
-  <lastBuildDate>Sun, 03 May 2015 02:21:15 UT</lastBuildDate>
-  <pubDate>Sun, 03 May 2015 02:21:15 UT</pubDate>
+  <lastBuildDate>Wed, 15 Jul 2015 21:44:13 UT</lastBuildDate>
+  <pubDate>Wed, 15 Jul 2015 21:44:13 UT</pubDate>
   <ttl>1800</ttl>
+  <item>
+   <title>Automatic triggering on try server</title>
+   <link>http://chmanchester.github.io/blog/2015/07/15/automatic-triggering-on-try-server/?utm_source=all&amp;utm_medium=RSS</link>
+   <guid>urn:http-chmanchester-github-io:-blog-2015-07-15-automatic-triggering-on-try-server</guid>
+   <pubDate>Wed, 15 Jul 2015 21:44:13 UT</pubDate>
+   <description>&lt;html&gt;
+&lt;p&gt;If you&amp;rsquo;ve pushed to Mozilla&amp;rsquo;s try server recently, you&amp;rsquo;ve probably noticed some of your failures being re-triggered automatically. This happens courtesy of the &lt;a href="https://github.com/chmanchester/trigger-bot"&gt;trigger bot&lt;/a&gt; tool implemented as a pulse listener that invokes self-serve in response to certain events.&lt;/p&gt;
+
+&lt;p&gt;Two trigerring rules are currently implemented:&lt;/p&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;When a test fails it&amp;rsquo;s triggered one more time, up to a certain portion of all  jobs for the push.&lt;/li&gt;
+ &lt;li&gt;When &lt;code&gt;--rebuild&lt;/code&gt; is found in try syntax, all test jobs for that push are  triggered the specified number of times.&lt;/li&gt;&lt;/ul&gt;
+
+&lt;p&gt;Finally, if &lt;code&gt;--rebuild&lt;/code&gt; is specified, nothing gets triggered when a test fails, and if &lt;code&gt;--no-retry&lt;/code&gt; is found in try syntax, no triggering happens for the push.&lt;/p&gt;
+
+&lt;p&gt;This was enabled at the end of June, and I&amp;rsquo;ve gotten a bit of feedback (almost mostly positive). My own curiosity is about the overall volume of these jobs, so I pulled some stats from self-serve to see how much we&amp;rsquo;ve ended up triggering. For the first 2 weeks of July, there were &lt;strong&gt;373,772&lt;/strong&gt; jobs on try, &lt;strong&gt;13,099&lt;/strong&gt; of which were initiated by the trigger-bot (&lt;strong&gt;3.5%&lt;/strong&gt;).&lt;/p&gt;
+
+&lt;p&gt;This is a larger proportion than I think it should be, but we&amp;rsquo;ve recently landed changes that mean we will trigger fewer hidden jobs. Hidden jobs are usually hidden due to failing persistently, so this should reduce overall triggering.&lt;/p&gt;
+
+&lt;p&gt;The rudimentary script I used to gather these stats is available on the &lt;a href="https://github.com/chmanchester/trigger-bot/commit/845bdf3737b5c4bff2a38c45311f71c96ec450dc"&gt;trigger-bot repo&lt;/a&gt;&lt;/p&gt;
+&lt;!-- more--&gt;&lt;/html&gt;</description></item>
   <item>
    <title>Content to begin after this post</title>
    <link>http://chmanchester.github.io/blog/2015/05/02/content-to-begin-after-this-post/?utm_source=all&amp;utm_medium=RSS</link>
