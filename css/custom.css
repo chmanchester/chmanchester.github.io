@@ -1,7 +1,7 @@
 /* custom.css */
 
 code {
-    color: black;
+    font-family: "Fira Mono";
 }
 
 /* When highlighted code blocks are too wide, they wrap. Resulting in the */
@@ -10,6 +10,8 @@ code {
 pre {
     white-space: pre;
     width: inherit;
+    color: #E2FFFC;
+    background-color: #2E3436;
 }
 
 .navbar {

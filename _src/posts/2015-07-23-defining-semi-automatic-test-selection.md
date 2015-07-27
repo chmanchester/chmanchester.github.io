@@ -1,6 +1,6 @@
     Title: Defining Semi-Automatic Test Prioritization
     Date: 2015-07-23T10:50:50
-    Tags: mozilla
+    Tags: DRAFT
 
 We run a lot of tests against Firefox, and running them takes a long time.
 Ideally, a best effort test selection is done on try, and if nothing obvious

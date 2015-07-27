@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Introducing mach try</title>
+    <meta name="description" content="A short introduction to mach try, a mach command that simplifies the process of selecting tests and pushing them to the try server....">
+    <meta name="author"      content="Chris">
+    <meta name="keywords"    content="mozilla">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <link rel="icon"      href="/favicon.ico">
+    <link rel="canonical" href="http://chmanchester.github.io/blog/2015/07/26/introducing-mach-try/">
+    <link rel="next" href="/blog/2015/07/15/automatic-triggering-on-try-server/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="//code.cdn.mozilla.net/fonts/fira.css">
+    <link rel="stylesheet" type="text/css" href="/css/magic-bootstrap-min.css">
+    <link rel="stylesheet" type="text/css" href="/css/pygments.css">
+    <link rel="stylesheet" type="text/css" href="/css/scribble.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <!-- Feeds -->
+    <link ref="alternate" type="application/atom+xml"
+          href="/feeds/all.atom.xml" title="Atom Feed">
+    <link ref="alternate" type="application/rss+xml"
+          href="/feeds/all.rss.xml" title="RSS Feed">
+    <!-- JS -->
+  </head>
+  <body>
+    <!-- A standard Twitter Bootstrap nav bar -->
+    <header class="navbar navbar-default navbar-inverse"
+            role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button"
+                  class="navbar-toggle"
+                  data-toggle="collapse"
+                  data-target=".our-nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/index.html" class="navbar-brand">no exit(0)</a>
+        </div>
+        <div class="collapse navbar-collapse our-nav-collapse"
+             role="navigation">
+          <ul class="nav navbar-nav">
+
+            <li>
+              <a href="/About.html">about</a>
+            </li> 
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+
+        <!-- Main column -->
+        <div id="content" class="col-md-12">
+
+
+
+
+          <article>
+  <header>
+    <h1>Introducing mach try</h1>
+    <p class='date-and-tags'>
+<time datetime="2015-07-26" pubdate="true">2015-07-26</time> :: <span class="tags"><a href="/tags/mozilla.html">mozilla</a></span></p>
+  </header>
+
+<p>A short introduction to mach try, a mach command that simplifies the process of selecting tests and pushing them to the try server.</p>
+<!-- more-->
+
+<p>To follow along at home you&rsquo;ll either need to be using git cinnabar or have a modern mercurial and the hg &ldquo;push-to-try&rdquo; extension (available from |mach mercurial-setup|). Append &mdash;no-push to commands to keep them from pushing to the try server, and -n to see verbose messages associated with the results of commands.</p>
+
+<pre><code># At its base, mach try is a commandline interface that takes try syntax
+# and automates the steps to push the current tree to try with that syntax.
+# For instance:
+
+$ ./mach try -p win32 -u mochitest-bc
+
+# ... will result in pushing "try: -b do -p win32 -u mochitest-bc -t none" to
+# try. This saves dealing mq or other ways of generating the try message
+# commit. (A mercurial extension is invoked to generate an in-memory
+# commit with the approriate message -- mq is not invoked at any stage).
+
+# The more novel feature exposed by mach try is the ability to select
+# specific test directories containing xpcshell, mochitests or reftests
+# to run on the try server, and to generate a set of test suites to run
+# based on tests under those directories.
+
+# For instance, if I've just made a change to one of the python libraries
+# used by our test harnesses, and I'd like to quickly check that this
+# feature works on windows. I can run:
+
+$ ./mach try -p win64 testing/xpcshell testing/mochitest/tests
+
+# This will result in the small number of xpcshell and mochitest tests
+# that live next to their harnesses being run (in a single chunk) on
+# try, so I can get my result without waiting for the entire suite,
+# or sifting through logs to figure out which chunk a test lives in
+# when I only care about running that test.</code></pre>
+
+<p>For more details run ./mach help try. As the command will inform you, this feature is under development &mdash; bugs should be filed blocking <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1149670">bug 1149670</a>).</p>
+  <footer>
+    <script type="text/javascript">
+      !function(d,s,id){
+          var js,fjs=d.getElementsByTagName(s)[0];
+          if(!d.getElementById(id)){
+              js=d.createElement(s);
+              js.id=id;
+              js.src="//platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js,fjs);
+          }
+      }(document,"script","twitter-wjs");
+    </script>
+    <a href="https://twitter.com/share"
+       class="twitter-share-button"
+       data-url="http://chmanchester.github.io/blog/2015/07/26/introducing-mach-try/"
+       data-dnt="true">
+      "Tweet"</a>
+    <script type="text/javascript">
+      var disqus_shortname = 'chmanchester';
+      (function() {
+          var dsq = document.createElement('script');
+          dsq.type = 'text/javascript';
+          dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <div id="disqus_thread"></div>
+    <ul class="pager">
+
+    <li class="next">
+      <a href="/blog/2015/07/15/automatic-triggering-on-try-server/"><em>Automatic triggering on try server</em> &rarr;</a>
+    </li>
+    </ul>
+  </footer>
+</article>
+        </div>
+      </div>
+      <footer>
+        <hr />
+        <p>Site generated
+        by <a href="https://github.com/greghendershott/frog">Frog</a>,
+        the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
+        <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
+        <p><em>Copyright © 2015 by Chris Manchester</em>.</p>
+      </footer>
+    </div>
+    <!-- </body> JS -->
+    <script type="text/javascript" src="//code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  </body>
+</html>
