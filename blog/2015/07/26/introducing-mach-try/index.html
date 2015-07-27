@@ -4,7 +4,7 @@
 
     <meta charset="utf-8">
     <title>Introducing mach try</title>
-    <meta name="description" content="A short introduction to mach try, a mach command that simplifies the process of selecting tests and pushing them to the try server....">
+    <meta name="description" content="This is a short introduction to mach try, a mach command that simplifies the process of selecting tests and pushing them to the try server....">
     <meta name="author"      content="Chris">
     <meta name="keywords"    content="mozilla">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
@@ -68,26 +68,25 @@
 <time datetime="2015-07-26" pubdate="true">2015-07-26</time> :: <span class="tags"><a href="/tags/mozilla.html">mozilla</a></span></p>
   </header>
 
-<p>A short introduction to mach try, a mach command that simplifies the process of selecting tests and pushing them to the try server.</p>
+<p>This is a short introduction to mach try, a mach command that simplifies the process of selecting tests and pushing them to the try server.</p>
 <!-- more-->
 
 <p>To follow along at home you&rsquo;ll either need to be using git cinnabar or have a modern mercurial and the hg &ldquo;push-to-try&rdquo; extension (available from |mach mercurial-setup|). Append &mdash;no-push to commands to keep them from pushing to the try server, and -n to see verbose messages associated with the results of commands.</p>
 
-<pre><code># At its base, mach try is a commandline interface that takes try syntax
-# and automates the steps to push the current tree to try with that syntax.
+<pre><code># mach try is a command that takes try syntax and automates the steps
+# to push the current tree to try with that syntax.
 # For instance:
 
 $ ./mach try -p win32 -u mochitest-bc
 
-# ... will result in pushing "try: -b do -p win32 -u mochitest-bc -t none" to
-# try. This saves dealing mq or other ways of generating the try message
-# commit. (A mercurial extension is invoked to generate an in-memory
-# commit with the approriate message -- mq is not invoked at any stage).
+# ... will result in pushing "try: -b do -p win32 -u mochitest-bc -t none"
+# to try. This saves dealing with mq or other ways of generating the try
+# message commit. (An in-memory commit is generated with the appropriate
+# message -- mq is not invoked at any stage).
 
 # The more novel feature exposed by mach try is the ability to select
 # specific test directories containing xpcshell, mochitests or reftests
-# to run on the try server, and to generate a set of test suites to run
-# based on tests under those directories.
+# to run on the try server.
 
 # For instance, if I've just made a change to one of the python libraries
 # used by our test harnesses, and I'd like to quickly check that this
@@ -97,9 +96,9 @@ $ ./mach try -p win64 testing/xpcshell testing/mochitest/tests
 
 # This will result in the small number of xpcshell and mochitest tests
 # that live next to their harnesses being run (in a single chunk) on
-# try, so I can get my result without waiting for the entire suite,
-# or sifting through logs to figure out which chunk a test lives in
-# when I only care about running that test.</code></pre>
+# try, so I can get my results without waiting for the entire suite,
+# and I don't need to sift through logs to figure out which chunk a
+# test lives in when I only care about running certain tests.</code></pre>
 
 <p>For more details run ./mach help try. As the command will inform you, this feature is under development &mdash; bugs should be filed blocking <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1149670">bug 1149670</a>).</p>
   <footer>
