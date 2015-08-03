@@ -10,9 +10,9 @@ defaults to a full set of test jobs. Modulo a handful of periodic build types,
 the remaining integration branches run a full set of tests and builds.
 <!-- more -->
 
-With the exception of the (optional) selection made by try syntax, none of
-these test selection mechanisms codify the idea that some tests might fail
-given a particular change, and others are unlikely to fail or never will.
+With the exception of the (entirely optional) selection made by try syntax,
+none of these steps codify the idea that some tests might fail given a
+particular change, and others are unlikely to fail or never will.
 
 What could smarter test prioritization look like?
 
@@ -25,8 +25,8 @@ What could smarter test prioritization look like?
 ## Outputs
 * Platforms
 * Build types
-* Test suites
 * Test sets
+* Test suites
 
 Here's a sketch of how this could work. This list doesn't have a lot of regard
 for what I think is feasible in the short term. Note, in particular, that code
@@ -69,8 +69,9 @@ Android (for instance), we can be confident selecting only those platforms.
 I expect these classifications to be coarse and stable enough to capture
 effectively with annotations in moz.build files.
 
-This is my general plan of attack for getting this off the ground in
-the coming months (initial work tracked in [bug 1184405](https://bugzilla.mozilla.org/show_bug.cgi?id=1184405)).
+This is the framework I'm going to use to get this off the ground in the coming
+months. Initial work (starting at the top of the process above) is tracked in
+[bug 1184405](https://bugzilla.mozilla.org/show_bug.cgi?id=1184405)).
 
 Feedback is welcome and appreciated.
 
