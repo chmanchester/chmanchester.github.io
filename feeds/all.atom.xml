@@ -4,7 +4,61 @@
  <link rel="self" href="http://chmanchester.github.io/feeds/all.atom.xml" />
  <link href="http://chmanchester.github.io/index.html" />
  <id>urn:http-chmanchester-github-io:-index-html</id>
- <updated>2015-07-27T01:41:38Z</updated>
+ <updated>2015-08-06T17:50:50Z</updated>
+ <entry>
+  <title type="text">Defining Semi-Automatic Test Prioritization</title>
+  <link rel="alternate" href="http://chmanchester.github.io/blog/2015/08/06/defining-semi-automatic-test-prioritization/?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:http-chmanchester-github-io:-blog-2015-08-06-defining-semi-automatic-test-prioritization</id>
+  <published>2015-08-06T17:50:50Z</published>
+  <updated>2015-08-06T17:50:50Z</updated>
+  <author>
+   <name>Chris</name></author>
+  <content type="html">&lt;html&gt;
+&lt;p&gt;We run a lot of tests against Firefox, and running them takes a long time. Ideally, a best effort test selection is done on try, and if nothing obvious shakes out of that a change is landed on inbound. Inbound runs a selection of test jobs pared down based on coarse historical data (SETA). Modulo a handful of periodic build types, the remaining integration branches run a full set of tests and builds.&lt;/p&gt;
+
+&lt;p&gt;With the exception of the (entirely optional) selection made by try syntax, none of these steps codify the idea that some tests might fail given a particular change, and others are unlikely to fail or never will.&lt;/p&gt;
+
+&lt;p&gt;This post outlines one approach to implementing smarter (semi-automatic) test selection for Gecko.&lt;/p&gt;
+&lt;!-- more--&gt;
+
+&lt;h3 id="inputs"&gt;Inputs&lt;/h3&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;Source file changes&lt;/li&gt;
+ &lt;li&gt;A set of test files given a set of changed source files&lt;/li&gt;
+ &lt;li&gt;A set of test platforms given a set of changed source files&lt;/li&gt;
+ &lt;li&gt;A mapping from test files to an idea of how to run them&lt;/li&gt;&lt;/ul&gt;
+
+&lt;h3 id="outputs"&gt;Outputs&lt;/h3&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;Platforms&lt;/li&gt;
+ &lt;li&gt;Build types&lt;/li&gt;
+ &lt;li&gt;Test sets&lt;/li&gt;
+ &lt;li&gt;Test suites&lt;/li&gt;&lt;/ul&gt;
+
+&lt;p&gt;Here&amp;rsquo;s a sketch of how this could work. This list doesn&amp;rsquo;t have a lot of regard for what I think is feasible in the short term. In particular, code coverage data for Mozilla&amp;rsquo;s code base is not readily available.&lt;/p&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;Source file changes for a push come from hg. This should be extractable  from a user&amp;rsquo;s machine or hg.mozilla.org.&lt;/li&gt;
+ &lt;li&gt;The build system (particularly moz.build file metadata) establishes an  initial mapping from source files to test files based on the proximity of  sources to test manifests and user input (annotations).&lt;/li&gt;
+ &lt;li&gt;Auxilliary sources of data enhance and expand dependency information. A  variety of sources could be useful:
+  &lt;ul&gt;
+   &lt;li&gt;Static dependencies: if A includes B, changing B could break A. This could  be derived from static analysis of source files (import/#includes), or  estimated based on dependencies defined by the build system.&lt;/li&gt;
+   &lt;li&gt;Code coverage: if A runs as a result of test B, test B might fail because  of a change to A. If A does not run as a result of test B, test B is  unlikely to fail as a result of a change to A.  (Many test case prioritization techniques involve code coverage in some  way&lt;sup&gt;&lt;a href="#2015-07-23-defining-semi-automatic-test-selection-footnote-1-definition" name="2015-07-23-defining-semi-automatic-test-selection-footnote-1-return"&gt;1&lt;/a&gt;&lt;/sup&gt;)&lt;/li&gt;
+   &lt;li&gt;Historical data: if changing A has made test B fail in the past, perhaps  it will do so again in the future. If changing A very frequently causes  test failures, perhaps we should expand our test set for a change to A.&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;
+ &lt;li&gt;The result is used to map source files to test files. Test files can  usually be mapped to automation jobs by consulting the build system for  a test flavor and finding the equivalent builder and suite category in  automation.&lt;/li&gt;&lt;/ul&gt;
+
+&lt;p&gt;After this process, platforms and build types are still not known. Build types are things like opt, debug, and pgo, while platforms are things like Windows or B2G. In general we can&amp;rsquo;t expect a set of changed files to suggest a test platform and build type (many changes will impact code that runs across platforms and build types), but when all changes are in a subdirectory known to impact a single platform, we can be confident selecting only that platform. I expect these classifications are coarse and stable enough to capture effectively with annotations in moz.build files.&lt;/p&gt;
+
+&lt;p&gt;This is the framework I&amp;rsquo;m planning to use to get this off the ground in the coming months. Initial work around fleshing out moz.build file metadata is tracked in &lt;a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1184405"&gt;bug 1184405&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;Feedback is welcome and appreciated.&lt;/p&gt;
+
+&lt;div class="footnotes"&gt;
+ &lt;ol&gt;
+  &lt;li id="2015-07-23-defining-semi-automatic-test-selection-footnote-1-definition" class="footnote-definition"&gt;
+   &lt;p&gt;For instance, &lt;a href="http://digitalcommons.unl.edu/cgi/viewcontent.cgi?article=1031&amp;amp;context=csetechreports"&gt;&amp;ldquo;Prioritizing test cases for regression testing&amp;rdquo;&lt;/a&gt;&amp;nbsp;&lt;a href="#2015-07-23-defining-semi-automatic-test-selection-footnote-1-return"&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;&lt;/html&gt;</content></entry>
  <entry>
   <title type="text">Introducing mach try</title>
   <link rel="alternate" href="http://chmanchester.github.io/blog/2015/07/26/introducing-mach-try/?utm_source=all&amp;utm_medium=Atom" />

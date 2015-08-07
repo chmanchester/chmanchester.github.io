@@ -3,13 +3,13 @@
   <head>
 
     <meta charset="utf-8">
-    <title>about</title>
-    <meta name="description" content="about: This blog is targeted towards various technical topics and timely information about ongoing work. I work on software tools at the Mozilla Corporation. I can be found as chmanchester on gmail, github, bugzilla, and irc.mozilla.org....">
+    <title>Posts tagged 'Mozilla'</title>
+    <meta name="description" content="Posts tagged 'Mozilla'">
     <meta name="author"      content="Chris">
-    <meta name="keywords"    content="">
+    <meta name="keywords"    content="Mozilla">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
-    <link rel="canonical" href="http://chmanchester.github.io/About.html">
+    <link rel="canonical" href="http://chmanchester.github.io/tags/Mozilla.html">
 
 
     <!-- CSS -->
@@ -20,9 +20,9 @@
     <link rel="stylesheet" type="text/css" href="/css/custom.css">
     <!-- Feeds -->
     <link ref="alternate" type="application/atom+xml"
-          href="/feeds/all.atom.xml" title="Atom Feed">
+          href="/feeds/Mozilla.atom.xml" title="Atom Feed">
     <link ref="alternate" type="application/rss+xml"
-          href="/feeds/all.rss.xml" title="RSS Feed">
+          href="/feeds/Mozilla.rss.xml" title="RSS Feed">
     <!-- JS -->
   </head>
   <body>
@@ -45,7 +45,7 @@
              role="navigation">
           <ul class="nav navbar-nav">
 
-            <li class="active">
+            <li>
               <a href="/About.html">about</a>
             </li> 
           </ul>
@@ -61,14 +61,20 @@
 
 
 
+          <article>
+  <header>
+    <h2><a href='/blog/2015/08/06/defining-semi-automatic-test-prioritization/'>Defining Semi-Automatic Test Prioritization</a></h2>
+    <p class='date-and-tags'>
+<time datetime="2015-08-06" pubdate="true">2015-08-06</time> :: <span class="tags"><a href="/tags/Mozilla.html">Mozilla</a></span></p>
+  </header>
 
-<h1 id="about">about</h1>
+<p>We run a lot of tests against Firefox, and running them takes a long time. Ideally, a best effort test selection is done on try, and if nothing obvious shakes out of that a change is landed on inbound. Inbound runs a selection of test jobs pared down based on coarse historical data (SETA). Modulo a handful of periodic build types, the remaining integration branches run a full set of tests and builds.</p>
 
-<p>This blog is targeted towards various technical topics and timely information about ongoing work.</p>
+<p>With the exception of the (entirely optional) selection made by try syntax, none of these steps codify the idea that some tests might fail given a particular change, and others are unlikely to fail or never will.</p>
 
-<p>I work on software tools at the Mozilla Corporation.</p>
-
-<p>I can be found as chmanchester on gmail, github, bugzilla, and irc.mozilla.org.</p>
+<p>This post outlines one approach to implementing smarter (semi-automatic) test selection for Gecko.</p>
+<footer class="read-more"><a href="/blog/2015/08/06/defining-semi-automatic-test-prioritization/">&hellip;more&hellip;</a></footer>
+</article>
         </div>
       </div>
       <footer>

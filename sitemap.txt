@@ -1,4 +1,5 @@
 http://chmanchester.github.io/blog/2015/07/15/automatic-triggering-on-try-server/
 http://chmanchester.github.io/blog/2015/05/02/content-to-begin-after-this-post/
 http://chmanchester.github.io/blog/2015/07/26/introducing-mach-try/
+http://chmanchester.github.io/blog/2015/08/06/defining-semi-automatic-test-prioritization/
 http://chmanchester.github.io/About.html
