@@ -63,6 +63,20 @@
 
           <article>
   <header>
+    <h2><a href='/blog/2015/08/06/defining-semi-automatic-test-prioritization/'>Defining Semi-Automatic Test Prioritization</a></h2>
+    <p class='date-and-tags'>
+<time datetime="2015-08-06" pubdate="true">2015-08-06</time> :: <span class="tags"><a href="/tags/mozilla.html">mozilla</a></span></p>
+  </header>
+
+<p>We run a lot of tests against Firefox, and running them takes a long time. Ideally, a best effort test selection is done on try, and if nothing obvious shakes out of that a change is landed on inbound. Inbound runs a selection of test jobs pared down based on coarse historical data (SETA). Modulo a handful of periodic build types, the remaining integration branches run a full set of tests and builds.</p>
+
+<p>With the exception of the (entirely optional) selection made by try syntax, none of these steps codify the idea that some tests might fail given a particular change, and others are unlikely to fail or never will.</p>
+
+<p>This post outlines one approach to implementing smarter (semi-automatic) test selection for Gecko.</p>
+<footer class="read-more"><a href="/blog/2015/08/06/defining-semi-automatic-test-prioritization/">&hellip;more&hellip;</a></footer>
+</article>
+<article>
+  <header>
     <h2><a href='/blog/2015/07/26/introducing-mach-try/'>Introducing mach try</a></h2>
     <p class='date-and-tags'>
 <time datetime="2015-07-26" pubdate="true">2015-07-26</time> :: <span class="tags"><a href="/tags/mozilla.html">mozilla</a></span></p>
