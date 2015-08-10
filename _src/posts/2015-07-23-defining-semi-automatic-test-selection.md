@@ -68,7 +68,7 @@ effectively with annotations in moz.build files.
 
 This is the framework I'm planning to use to get this off the ground in the
 coming months. Initial work around fleshing out moz.build file metadata is
-tracked in [bug 1184405](https://bugzilla.mozilla.org/show_bug.cgi?id=1184405)).
+tracked in [bug 1184405](https://bugzilla.mozilla.org/show_bug.cgi?id=1184405).
 
 Feedback is welcome and appreciated.
 

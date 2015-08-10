@@ -105,7 +105,7 @@
 
 <p>After this process, platforms and build types are still not known. Build types are things like opt, debug, and pgo, while platforms are things like Windows or B2G. In general we can&rsquo;t expect a set of changed files to suggest a test platform and build type (many changes will impact code that runs across platforms and build types), but when all changes are in a subdirectory known to impact a single platform, we can be confident selecting only that platform. I expect these classifications are coarse and stable enough to capture effectively with annotations in moz.build files.</p>
 
-<p>This is the framework I&rsquo;m planning to use to get this off the ground in the coming months. Initial work around fleshing out moz.build file metadata is tracked in <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1184405">bug 1184405</a>).</p>
+<p>This is the framework I&rsquo;m planning to use to get this off the ground in the coming months. Initial work around fleshing out moz.build file metadata is tracked in <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1184405">bug 1184405</a>.</p>
 
 <p>Feedback is welcome and appreciated.</p>
 
