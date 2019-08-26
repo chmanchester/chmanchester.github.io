@@ -1,7 +1,18 @@
 ---
 layout: page
-title: Test
-permalink: /test/
+title: Clips
+permalink: /clips/
 ---
 
-Test *Test* `test`
+Test  
+`test`
+
+{% include no_tune.html %}
+
+*Test*  
+
+{% include third.html %}
+
+test  
+
+{% include sy.html %}
