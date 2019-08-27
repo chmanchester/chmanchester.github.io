@@ -39,10 +39,9 @@ In this final example, each string's modes are tuned as though the guitar were i
 an alternate tuning, in this case G G D D D# D#, taken from  Sonic Youth's
 [tuning guide](http://www.sonicyouth.com/mustang/tab/tuning.html). The harmonics
 and behind the bridge tones of this tuning were notably used by Thurston Moore
-for *Bull in The Heather*. An impression reminiscent of the live version of the
-*Bull in the Heather* intro can be made by setting the effect to use the
-filtered signal only and playing selected muted harmonics. A distortion effect
-is applied after the modal filters in this example to further emphasize certain
-resonances:  
+for "Bull in The Heather". An impression reminiscent of the
+[live version](https://www.youtube.com/watch?v=ebVkCZ0Ei9Q) of the "Bull in the
+Heather" intro can be made by setting the effect to use the filtered signal only
+and playing selected muted harmonics:  
 
 {% include sy.html %}
